@@ -1,0 +1,434 @@
+<!--Christine Bonneville created this Login Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="booksforsnooksfavicon.jpg">
+    <style>
+        /*CSS we share across the website
+
+        body{
+            width: 1250px;
+            margin: 20px auto;
+            padding: 10px;
+            background: url('backgroundcode.jpg');
+            font-size: 20px;
+            font-family: Courier;
+        }
+
+        header {
+            display:flex;
+            justify-content: space-between;
+            background-color: #7a007a;
+            height: 150px;
+            padding: 10px;
+            margin: 10px; 
+            border-radius: 5px;
+        }
+        .tagline {
+            margin-right: 10px;
+            margin-top: 30px;
+        }
+
+        nav {
+            font-family: Courier;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background-color:#afafff;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-evenly;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 25px;
+            font-family: Courier; 
+            color: #0000b8;
+            font-weight: bold;
+            
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #afafff;
+            text-align: center;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        .footerlogo {
+            height:50px;
+            padding: 10px;
+        }*/
+              
+         /*CSS for just the contact page*/
+        
+        .logincontainer {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fef9ff;
+            padding: 10px;
+            border: 2px solid #7a007a;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 99%;
+            margin: 0 auto;
+            background: url('booksforsnookslogin.jpg') no-repeat center center/cover;
+            text-align: left;
+            color: #0000ff;
+            text-shadow: 1px 1px #000000;
+            position: relative;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: left;
+        }
+            
+        .hero-text::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1); 
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .hero-text {
+            font-size: 60px;
+            font-family: Courier;
+        }
+
+        .fieldsetcontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            border: 5px solid #7a007a;
+            height: 900px;
+            border-radius: 5px;
+            padding: 10px;           
+        }
+
+        .insideform {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            justify-content: space-evenly;
+            border: 3px solid #0000b8;
+            border-radius: 5px;
+            font-weight: bold;
+            color: midnightblue;
+            width: 100%;
+            clear: both;
+        }
+
+        legend {
+            background-color: #fff5ee;
+            color: #0000b8;
+            border: 3px solid #000000;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .loginbutton {
+            background-color: #ff00ff;
+            border-color:2px  #7a007a;
+            color:#000000;
+            border-radius: 5px;
+            font-family: Courier;
+        }
+
+        .cancelbutton {
+            background-color: #909090;
+            border-color:2px  #7a007a;
+            color:#000000;
+            border-radius: 5px;
+            font-family: Courier;
+        }
+        
+        .registerbutton {
+            background-color: #afafff;
+            border-color:2px  #7a007a;
+            color:#000000;
+            border-radius: 5px;
+            font-family: Courier;
+        }
+        /**************************************/
+        /*to flip the login card*/
+
+        .flip-card {
+        width: 875px;
+        height: 875px;
+        /*perspective: 1000px; /* Removed this because I don't want the 3D effect cb*/
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+        position: relative;
+        width: 875px;
+        height: 875px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+        background-color: transparent;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+        transform: rotateY(180deg);
+        }
+
+        .flip-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        
+        /**************************************/
+        /*media queries for contact page*/
+
+        @media screen and (max-width: 400px) {
+            body, .contactcontainer, .fieldsetcontainer, .insideform, legend, header, .tagline, nav, nav ul, nav a, nav a:hover {
+                width: 94%;
+                padding: 2%;
+                font-size: 16px;
+            }
+
+            .tagline {
+                display: none;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-image {
+                width: 94%;
+                height: 50%;
+                padding: 2%;
+                font-size: 15px;
+                color: #000000;
+                text-shadow: 1px 1px #fff5ee;
+            }
+            
+            .fieldsetcontainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .insideform {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                justify-content: space-evenly;
+            }
+
+            /***********************/
+            /*mcq fliptest*/
+
+            .flip-card {
+                width: 45%;
+                height: 45%;
+                /* perspective: 250px; /* Remove this if you don't want the 3D effect */
+            }
+
+            /* This container is needed to position the front and back side */
+            .flip-card-inner {
+                position: relative;
+                width: 350px;
+                height: 350px;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+
+            /* Do an horizontal flip when you move the mouse over the flip box container */
+                .flip-card:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            /* Position the front and back side */
+            .flip-card-front, .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden; /* Safari */
+                backface-visibility: hidden;
+            }
+
+            /* Style the front side (fallback if image is missing) */
+                .flip-card-front {
+                background-color: transparent;
+            }
+
+            /* Style the back side */
+                .flip-card-back {
+                transform: rotateY(180deg);
+            }
+
+            .flip-img {
+                width: 300px;
+                height: 300px;
+                border-radius: 5px;
+                align-self: center;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+<div class="logincontainer">
+    <header>
+        <div class="logo">
+            <img src="booksforsnookslogo.jpg" alt="Logo" height="150px"></img>
+        </div>
+
+        <div class="tagline">
+            <img src="booksforsnookstagline.jpg" alt="Tagline" height="100px"></img>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Refresh Login</a></li> 
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>               
+
+        </ul>
+    </nav>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p><b>&nbsp;login</b></p>
+        </div>
+    </div>
+    <br>
+    <main>
+        <div class="fieldsetcontainer">
+            <form> 
+                
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <fieldset class="insideform">
+                            <img  src="logincard.jpg" alt="Java for Dummies" class="flip-img">
+                        </fieldset>
+                    </div>
+                  
+                    <div class="flip-card-back">
+                        <fieldset class="insideform">
+                            <legend>HAVE AN ACCOUNT? PLEASE LOGIN HERE</legend>
+                            <div>
+                                <p>Please enter your username. It should consist of 8 to 15 characters,<br>with at least 1 number, 1 uppercase letter, and 1 punctuation symbol.
+                                </p>
+                            </div>
+                            <br>
+                            <div>
+                                <label for="userName"><b>Username:</b></label>
+                            <br>
+                                <input style="background-color: #afafff; border-color: #7a007a; color:#000000" type="text" placeholder="Enter Username" name="userName" required>
+                            </div>
+                            <br>
+                            <div>   
+                                <label for="passWord"><b>Password:</b></label>
+                                <br>
+                                <input style="background-color: #afafff; border-color: #7a007a; color:#000000" type="passWord" placeholder="Enter Password" name="passWord" required>
+                            </div>
+                            <br>
+                                <div>
+                                    <p>Note: By logging in, you agree to all term and conditions.</p>
+                                </div>
+                                <br>
+                                <div>
+                                    <button class="loginbutton" type="submit"><h3><b>LOGIN</b></h3></button>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                                    </label>
+                                </div>
+                                <br>
+                                <div>
+                                    <button class="cancelbutton" type="submit"><h3><b>CANCEL</b></h3></button>
+                                    <br>
+                                        <span>Forgot<br><a href="#">password?</a></span>
+                            
+                            </div>
+                        </fieldset>
+                        <br>
+                        <fieldset class="insideform">
+                            <legend>NO ACCOUNT? PLEASE REGISTER HERE</legend>
+                            <div>
+                                <label for="firstName">First Name: </label>
+                                <br>
+                                <input style="background-color: #afafff; border-color: #7a007a; color:#000000" type="text" name="firstName" id="firstName" placeholder="Enter First Name">
+                            </div>
+                            <br>
+                            <div>
+                                <label for="lastName">Last Name: </label>
+                                <br>
+                                <input style="background-color:#afafff; border-color: 2px  #7a007a; color:#000000" type="text" name="lastName" id="lastName" placeholder="Enter Last Name">
+                            </div>
+                            <br>
+                                <div>
+                                    <button class="registerbutton" type="submit"><h3><b>REGISTER</b></h3></button>
+                                </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>           
+            </form> 
+        </div>
+    </main>
+    <footer>
+        <p><img src="booksforsnooksfooter.jpg" alt="company logo" class="footerlogo" align="middle"> <b>&copy; 2025</b></p>
+    </footer>
+</div>
+</body>
+</html>

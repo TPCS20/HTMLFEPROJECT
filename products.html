@@ -1,0 +1,342 @@
+<!--Harris Song created this Products page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>Products Page</title>
+    <link rel="icon" type="image/x-icon" href="booksforsnooksfavicon.jpg">
+    <style>
+        /*CSS we all share across the website
+
+        body{
+            width: 1250px;
+            margin: 20px auto;
+            padding: 10px;
+            background: color #fff5ee;
+            background: url('backgroundcode.jpg');
+        }
+
+        header {
+            display:flex;
+            justify-content: space-between;
+            background-color: #7a007a;
+            height: 150px;
+            padding: 10px;
+            margin: 10px; 
+            border-radius: 5px;
+        }
+        
+        .tagline {
+            margin-right: 10px;
+            margin-top: 30px;
+        }
+
+        nav {
+            font-family: Courier;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #afafff;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+        }
+        nav a {
+            text-decoration: none;
+            font-size: 25px;
+            font-family: Courier;
+            color: #0000b8;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        footer{
+            background-color: #afafff;
+            text-align: center;
+            font-size: 1em;
+            border-radius: 5px;
+            font-family: Courier;
+        }
+        
+        .footerlogo{
+            height:50px;
+            padding: 10px;
+        }*/
+        
+        /*CSS for just the products page*/
+
+        .productscontainer {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fef9ff;
+            padding: 10px;
+            border: 2px solid #7a007a;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 99%;
+            margin: 0 auto;
+            background: url('booksforsnooksproducts.jpg') no-repeat center center/cover;
+            text-align: left;
+            color: #fff5ee;
+            text-shadow: 1px 1px #0000ff;
+            position: relative;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: left;
+        }
+           
+        .hero-text::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 5px;
+        }
+ 
+        .hero-text {
+            font-size: 60px;
+            font-family: Courier;
+        }
+ 
+        .fieldsetcontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            border: 5px solid #7a007a;
+            border-radius: 5px;
+            padding: 10px;           
+        }
+
+        .book{
+            display: flex;
+            flex-flow: column;
+            font-family: Courier ;
+            font-size: 25px;
+            border:  3px solid #0000B8 ;
+            background-color: #F2F3F4 ;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 #afafff;
+        }
+        
+        .book img{
+            width: 100%;
+            height: 100%; 
+            border: 1px solid #0000B8; 
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 5px;
+            margin: 20px;
+         }
+        
+        .book button{
+            background-color: #7F00FF ;
+            color: #FFF5EE;
+            font-family: Courier;
+            border-color: #6200C4;
+            padding: 6%;
+            width: 85%;
+            font-size: 100%;
+        }
+
+        .search {
+            background-color: #7a007a;
+            width: 300px;
+            height: 25px;
+        }
+
+
+        /*media queries for product page*/
+
+        @media screen and (max-width: 400px) {
+            body, .productcontainer, .fieldsetcontainer, .insideform, legend, header, .tagline, nav, nav ul, nav a, nav a:hover {
+                width: 94%;
+                padding: 2%;
+                font-size: 16px;
+            }
+
+            .tagline {
+                display: none;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-image {
+                width: 94%;
+                height: 50%;
+                padding: 2%;
+                font-size: 15px;
+                color: #000000;
+                text-shadow: 1px 1px #fff5ee;
+            }
+            
+            .fieldsetcontainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .insideform {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                justify-content: space-evenly;
+            }
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="productscontainer">
+    <header>
+        <div class="logo">
+            <img src="booksforsnookslogo.jpg" alt="Logo" height="150px"></img>
+        </div>
+
+        <div class="tagline">
+            <img src="booksforsnookstagline.jpg" alt="Tagline" height="100px"></img>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li> 
+            <li><a href="products.html">Refresh Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>               
+        </ul>
+    </nav>
+    <div class="hero-image">
+        <div class="hero-text">
+            <p><b>&nbsp;books</b></p>
+        </div>
+    </div>
+    <br>
+<main>
+    <div class="fieldsetcontainer">
+        <div class = "grid">
+
+            <article class="book">
+                <h3>Java <br>for <br>Dummies</h2>
+                <img src="book1.jpg" alt="Java for Dummies">
+                <h3>$30.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>C#10.0 <br>for<br> Dummies</h3>
+                <img src="book2.jpg" alt="C#10.0 for Dummies">
+                <h3>$40.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>HTML, CSS, and JavaScript for Dummies</h3>
+                <img src="book3.jpg" alt="HTML, CSS, and JavaScript for Dummies">
+                <h3>$40.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>HTML <br>& CSS</h3>
+                <img src="book4.jpg" alt="HTML & CSS">
+                <h3>$30.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>JAVASCRIPT & JQUERY</h3>
+                <img src="book5.jpg" alt="JAVASCRIPT & JQUERY">
+                <h3>$70.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>Python Crash Course</h3>
+                <img src="book6.jpg" alt="Python Crash Course">
+                <h3>$50.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>Object-Oriented Python</h3>
+                <img src="book7.jpg" alt="Object-Oriented Python">
+                <h3>$60.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>Math Adventures with Python</h3>
+                <img src="book8.jpg" alt="Math Adventures with Python">
+                <h3>$40.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>Linear Algebra for Dummies</h3>           
+                <img src="book9.jpg" alt="Linear Algebra for Dummies">
+                <h3>$30.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>The Manga <br>Guide to <br>Linear Algebra</h3>
+                <img src="book10.jpg" alt="The Manga Guide to Linear Algebra">
+                <h3>$34.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>Essential <br>Computer<br> Mathematics</h3>
+                <img src="book11.jpg" alt="Essential Computer Mathematics">
+                <h3>$45.00<h3>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="book">
+                <h3>HTML & CSS Essentials for Dummies</h3>
+                <img src="book12.jpg" alt="HTML & CSS Essentials for Dummies">
+                <h3>$20.00<h3>
+                <button>Buy Now</button>
+            </article>
+            </div>
+  
+    
+    </div>
+</main>
+    
+    <footer>
+        <p><img src="booksforsnooksfooter.jpg" alt="company logo" class="footerlogo" align="middle"> <b>&copy; 2025</b></p>
+    </footer>
+
+</div>
+</body>

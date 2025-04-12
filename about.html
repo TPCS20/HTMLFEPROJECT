@@ -1,0 +1,290 @@
+<!--Tulsi Patel created this About page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="booksforsnooksfavicon.jpg"> 
+    <style>
+        /*CSS we share across the website
+        body{
+            width: 1250px;
+            margin: 20px auto;
+            padding: 10px;
+            background: url('backgroundcode.jpg');
+            font-size: 20px;
+            font-family: Courier;
+        }
+
+        header {
+            display:flex;
+            justify-content: space-between;
+            background-color: #7a007a;
+            height: 150px;
+            padding: 10px; 
+            margin: 10px; 
+            border-radius: 5px;
+        }
+
+        .tagline {
+            margin-right: 10px;
+            margin-top: 30px;
+        }
+
+        nav {
+            font-family: Courier;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background-color:#afafff;
+        }       
+
+        nav ul{
+            list-style: none;
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-evenly;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 25px;
+            font-family: Courier; 
+            color: #0000b8;
+            font-weight: bold;
+            
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer{
+            background-color: #afafff;
+            text-align: center;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        .footerlogo{
+            height:50px;
+            padding: 10px;
+        }
+
+        /*------ About page styling ------*/
+        legend {
+            text-align: center;
+        }
+
+        .aboutcontainer {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fef9ff;
+            padding: 10px;
+            border: 2px solid #7a007a;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            font-family: Courier;
+        }
+
+        .abouthero-image {
+            width: 99%;
+            margin: 0 auto;
+            background: url('booksforsnooksabout.jpg') no-repeat center center/cover;
+            text-align: left;
+            color: #0000b8;
+            text-shadow: 1px 1px #fef9ff;
+            position: relative;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: left;
+        }
+
+        .hero-text::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1); 
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .hero-text {
+            font-size: 60px;
+            font-family: Courier;
+        }
+
+        .aboutfieldsetcontainer {
+            border: 5px solid #7a007a;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .teamgrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .cardbox {
+            width: 60%;
+            padding: 0 10px; 
+            margin:auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(111, 48, 220, 0.5);
+            padding: 16px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+
+        h3{
+            font-size: 25px;
+            color: #7a007a;
+            font-family: Courier;
+        }
+
+        /*media queries for about us page*/
+
+        @media screen and (max-width: 400px) {
+            body, .aboutcontainer, header, .tagline, nav, nav ul, nav a, nav a:hover,footer,.card, .cardbox{
+                width: 94%;
+                padding: 2%;
+                font-size: 16px;
+            }
+            .tagline {
+                display: none;
+            }
+            .teamgrid {
+                grid-template-columns: none;
+            }   
+            .card {
+                margin: auto;
+            }
+            .quote{
+                display: none;
+            }
+            nav a {
+                margin-left: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .abouthero-image {
+                width: 94%;
+                height: 50%;
+                padding: 2%;
+                font-size: 15px;
+                color: #0000b8;
+                text-shadow: 1px 1px #fef9ff;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="aboutcontainer">
+        <header>
+            <div class="logo">
+                <img src="booksforsnookslogo.jpg" alt="Logo" height="150px"></img>
+            </div>
+            <div class="tagline">
+                <img src="booksforsnookstagline.jpg" alt="Tagline" height="100px"></img>
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li> 
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">Refresh About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="abouthero-image">
+            <div class="hero-text">
+                <p><b>&nbsp;meet the team</b></p>
+            </div>
+        </div>
+
+        <main class="aboutfieldsetcontainer">
+            <legend>
+                <p><b>Press Play</b></p>
+                <audio controls loop>
+                <source src="clubbed to death - Matrix soundtrack (320  kbps).mp3" type="audio/mpeg" alt="Clubbed to Death Soundtrack By Rob Dougan(1997)">
+                </audio>
+            </legend>
+
+            <legend>
+                <h2 style="font-size: 35px;text-decoration: underline; color: #6200c4;">About Us</h2>
+                <p>At Auto – Did - Acts™, our mission is to encourage self-learners <br>of all ages to acquire programming 
+                    know-how through <br>self-directed learning outside of the classroom. <br><br>To support that mission, we 
+                    created our bookstore, b00ks 4 sn00ks,<br> to provide new programmers, and their curiosity-driven mindsets,<br>
+                    with an array of analog books to help them develop at their own pace.
+                    <br><br>Meet the creators of this site.</p>
+            </legend>
+
+            <div class="teamgrid">
+                <div class="cardbox">
+                    <div class="card">
+                        <img src="Edin.jpg" alt="Edin" style="width:100%">
+                        <h3><b>Edin Husic</b></h3>
+                        <p>Designer & Developer</p>
+                        <p class="quote">"Always code as if the guy who ends up maintaining your code will be a 
+                            violent psychopath who knows where you live." <br> - Rick Osborne -
+                        </p>
+                    </div><br>
+                </div>
+                
+                <div class="cardbox">
+                    <div class="card">
+                        <img src="Harris.jpg" alt="Harris" style="width:100%">
+                        <h3><b>Harris Song</b></h3>
+                        <p>Designer & Developer</p>
+                        <p class="quote">"Code is like humor, when you have to explain it, it's bad." <br> - Cory House -<br><br><br></p>
+                    </div><br>
+                </div>
+        
+                <div class="cardbox">
+                    <div class="card">
+                        <img src="Christine.jpg" alt="Christine" style="width:100%">
+                        <h3><b>Christine Bonneville</b></h3>
+                        <p>Designer & Developer</p>
+                        <p class="quote">"If implementation is hard to explain, then it's a bad idea. 
+                            If implementation is easy to explain, it may be a good idea." 
+                            <br> - Tim Peters - </p>
+                    </div><br>
+                </div>
+                
+                <div class="cardbox">
+                    <div class="card">
+                        <img src="Tulsi.jpg" alt="Tulsi" style="width:100%">
+                        <h3><b>Tulsi Patel</b></h3>
+                        <p>Designer & Developer</p>
+                        <p class="quote">"Testing leads to failure, and failure leads to understanding."<br>- Burt Rutan - <br><br><br></p>
+                    </div><br>
+                </div> 
+            </div>
+        </main>
+
+        <footer>
+            <p><img src="booksforsnooksfooter.jpg" alt="company logo" class="footerlogo" align="middle"> <b>&copy; 2025</b></p>
+        </footer>
+    </section>
+    
+</body>
+</html>

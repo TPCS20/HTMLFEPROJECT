@@ -1,0 +1,354 @@
+<!--Christine Bonneville created this Contact page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="booksforsnooksfavicon.jpg">
+    <style>
+        /*CSS we share across the website
+
+        body{
+            width: 1250px;
+            margin: 20px auto;
+            padding: 10px;
+            background: url('backgroundcode.jpg');
+            font-size: 20px;
+            font-family: Courier;
+        }
+
+        header {
+            display:flex;
+            justify-content: space-between;
+            background-color: #7a007a;
+            height: 150px;
+            padding: 10px; 
+            margin: 10px; 
+            border-radius: 5px;
+        }
+
+        .tagline {
+            margin-right: 10px;
+            margin-top: 30px;
+        }
+
+        nav {
+            font-family: Courier;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background-color:#afafff;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-evenly;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 25px;
+            font-family: Courier; 
+            color: #0000b8;
+            font-weight: bold;
+            
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #afafff;
+            text-align: center;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        .footerlogo {
+            height:50px;
+            padding: 10px;
+        }*/
+              
+         /*CSS for just the contact page*/
+        
+        .contactcontainer {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fef9ff;
+            padding: 10px;
+            border: 2px solid #7a007a;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 99%;
+            margin: 0 auto;
+            background: url('booksforsnookscontacthero.jpg') no-repeat center center/cover;
+            text-align: left;
+            color: #ee00ee;
+            text-shadow: 1px 1px #fef9ff;
+            position: relative;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: left;
+        }
+            
+        .hero-text::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1); 
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .hero-text {
+            font-size: 60px;
+            font-family: Courier;
+        }
+ /*CSS specific to contact page*/
+
+        .fieldsetcontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            border: 5px solid #7a007a;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .insideform {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            justify-content: space-evenly;
+            border: 3px solid #0000b8;
+            border-radius: 5px;
+            font-weight: bold;
+            color: midnightblue;
+            width: 100%;
+            clear: both;
+        }
+
+        legend {
+            background-color: #fff5ee;
+            color: #0000b8;
+            border: 3px solid #000000;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: left;
+        }
+
+        button {
+            background-color: #afafff;
+            border-color: 2px #7a007a;
+            color:#000000;
+            border-radius: 5px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .search {
+            background-color: #7a007a;
+            width: 300px;
+            height: 25px;
+        }
+
+
+        /*media queries for contact page*/
+
+        @media screen and (max-width: 400px) {
+            body, .contactcontainer, .fieldsetcontainer, .insideform, legend, header, .tagline, nav, nav ul, nav a, nav a:hover {
+                width: 94%;
+                padding: 2%;
+                font-size: 16px;
+            }
+
+            .tagline {
+                display: none;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-image {
+                width: 94%;
+                height: 50%;
+                padding: 2%;
+                font-size: 15px;
+                color: #000000;
+                text-shadow: 1px 1px #fff5ee;
+            }
+            
+            .fieldsetcontainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .insideform {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                justify-content: space-evenly;
+            }
+
+            button {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="contactcontainer">
+    <header>
+        <div class="logo">
+            <img src="booksforsnookslogo.jpg" alt="Logo" height="150px"></img>
+        </div>
+
+        <div class="tagline">
+            <img src="booksforsnookstagline.jpg" alt="Tagline" height="100px"></img>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li> 
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Refresh Contact</a></li>           
+        </ul>
+    </nav>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p><b>&nbsp;contact</b></p>
+        </div>
+    </div>
+    <br>
+    <main>
+        <div class="fieldsetcontainer">
+            <form>      
+                <fieldset class="insideform">
+                    <legend>FULL NAME</legend>
+                    <div>
+                        <label for="firstName">First Name: </label>
+                        <br>
+                        <input style="background-color: #afafff;border-color: #7a007a; color:#000000" type="text" name="firstName" id="firstName" placeholder="Enter First Name">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="lastName">Last Name: </label>
+                        <br>
+                        <input style="background-color:#afafff;border-color: 2px  #7a007a; color:#000000" type="text" name="lastName" id="lastName" placeholder="Enter Last Name">
+                    </div>
+                </fieldset>
+            <br>                
+                <fieldset class="insideform" >
+                    <legend>CONTACT INFORMATION</legend>
+                    <div>
+                        <label for="email">Email: </label>
+                        <br>
+                        <input style="background-color: #afafff;border-color: 2px  #7a007a; color:#000000" type="email" name="email" placeholder="Enter email">
+                    </div>
+                    <br>          
+                    <div>
+                        <label for="phoneNumber">Phone: </label>
+                        <br>
+                        <input style="background-color: #afafff;border-color: 2px  #7a007a; color:#000000" type="tel" name="phoneNumber" placeholder="Enter phone number">
+                    </div>
+                </fieldset>
+            <br>      
+                <fieldset class="insideform">
+                    <legend>COMMENTS OR QUESTIONS</legend>
+                    <div>
+                        <textarea style="background-color: #afafff;border-color:2px  #7a007a; color:#000000" name="message" cols="30" rows="5" placeholder="Enter comments or questions"></textarea>
+                    </div>
+                </fieldset>
+            <br>                   
+                <fieldset class="insideform">
+                    <legend>IS YOUR INQUIRY URGENT?</legend>
+                    <div>
+                      <input type="radio" name="choice" id="yes" value="yes">
+                      <label for="YES">YES</label>
+                    </div>
+                    <div>
+                      <input type="radio" name="choice" id="no" value="no">
+                      <label for="no">NO</label>
+                    </div>
+                </fieldset>   
+            <br>
+                <fieldset class="insideform" >
+                    <legend>HOW WOULD YOU LIKE TO BE CONTACTED? Choose all that apply.</legend>
+                    <div>
+                        <input type="checkbox" name="postal" value="postal"><label for="postal">Snail Mail</label>
+                        <br>
+                        <input type="checkbox" name="email" value="email"><label for="email">Email</label>
+                        <br>
+                         <input type="checkbox" name="telephone" value="telephone"><label for="telephone">Telephone</label>
+                    </div>
+                </fieldset>
+            <br>
+                <fieldset class="insideform">
+                    <legend>ATTACH ANY DOCUMENTS</legend>
+                    <button>
+                    <input type="file" name="userFiles" multiple></button>  
+                </fieldset>
+            <br>
+                <fieldset class="insideform">
+                <legend>RATE OUR WEBSITE</legend>     
+                    <button><div>1</div>
+                    <input type="range" min="1" max="10" step="1" value="5"><div>10</div>
+                </button>
+                
+                </fieldset>
+            
+                <br>
+                <fieldset class="insideform">
+                    <legend>SUBMIT FORM</legend>
+                    <div>Note: By submitting, you agree to all terms and conditions.&nbsp;</div>
+                    <button type="submit">Submit</button>
+                </fieldset>
+                <br>
+                <fieldset class="insideform">
+                    <legend>OUR ADDRESS</legend>
+                        <div>
+                            <address>
+                            Email us:<br>
+                            <a href="mailto:contactb4s@auto-did-acts.com">Auto - Did - Acts&trade;</a><br>
+                            Snail Mail:<br>
+                            1 Black Cat Loop<br>
+                            Glitch, Matrix N3O 0N3<br>
+                            CANADA
+                            </address>
+                        </div>
+                </fieldset>
+            </form> 
+        </div>
+    </main>
+   
+    <footer>
+        <p><img src="booksforsnooksfooter.jpg" alt="company logo" class="footerlogo" align="middle"> <a href="easteregg.html"<b>&copy; 2025</b></p>
+    </footer>
+</div>
+</body>
+</html>

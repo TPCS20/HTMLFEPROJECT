@@ -1,0 +1,64 @@
+/*This is the shared website CSS*/
+body{
+    width: 1250px;
+    margin: 20px auto;
+    padding: 10px;
+    background: url('backgroundcode.jpg');/*cb added*/
+    font-size: 20px;/*cb added*/
+    font-family: Courier;/*cb added*/
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+    background-color: #7a007a;
+    height: 150px;
+    padding: 10px; 
+    margin: 10px;
+    border-radius: 5px;
+}
+.tagline {
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+nav {
+    font-family: Courier;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color:#afafff;
+}
+
+nav ul{
+    list-style: none;
+    display: flex; 
+    flex-direction: row; /*to center nav links--cb added*/
+    justify-content: space-evenly;
+
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Courier; /*cb added*/
+    color: #0000b8;
+    font-weight: bold;
+    
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #afafff;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+}
+.footerlogo {
+    height:50px;
+    padding: 10px;
+}
+      

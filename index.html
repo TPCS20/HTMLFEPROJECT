@@ -1,0 +1,467 @@
+<!--Edin Husic created this Home page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="booksforsnooksfavicon.jpg"> 
+    <style>
+        /*CSS we share across the website
+
+        body {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 10px;
+            background: url('backgroundcode.jpg');
+            font-size: 20px;
+            font-family: Courier;
+            width: 100%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #7a007a;
+            height: 150px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .tagline {
+            margin-right: 10px;
+            margin-top: 30px;
+        }
+
+        nav {
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #afafff;
+        }       
+
+        nav ul {
+            list-style: none;
+            display: flex; 
+            justify-content: space-evenly;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 25px;
+            color: #0000b8;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #afafff;
+            text-align: center;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+
+        .footerlogo {
+            height: 50px;
+            padding: 5px;
+        }}*/
+
+        /*CSS for home page only*/
+        .homecontainer {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fef9ff;
+            padding: 10px;
+            border: 2px solid #7a007a;
+            border-radius: 5px;
+        }
+
+        .homefieldcontainer {
+            border: 5px solid #7a007a;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .hero-image {
+            width: 99%;
+            margin: 0 auto;
+            background: url(bookshelfhero.jpg) no-repeat center center/cover;
+            text-align: center;
+            color: #debdff;
+            text-shadow: 1px 1px #fff5ee;
+            position: relative;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-text::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1); 
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .hero-text {
+            font-size: 60px;
+            font-family: Courier;
+        }
+
+        .botm {
+            border: 2px solid black;
+        }
+
+        video {
+            display: block;
+            margin: auto;
+            border: 2px solid black;
+        }
+
+        button {
+            width: auto;
+            height: 25px;
+        }
+
+        .videofigure {
+            display: flex;
+            justify-content: center;
+        }
+
+        figcaption {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        .search {
+            background-color: #debdff;
+            color: #7a007a;
+            width: 300px;
+            height: 25px;
+        }
+
+        .searchbutton {
+            background-color: #ff00ff;
+            border-color:2px  #7a007a;
+            color:#000000;
+            border-radius: 5px;
+            font-family: Courier;
+        }
+
+        h2, h4 {
+            text-align: center;
+        }
+
+        .intro {
+            text-align: center;
+            margin: 15px;
+        }
+
+        h4 {
+            margin-top: -20px;
+        }
+
+        .choose-us {
+            font-size: large;
+            text-align: center;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+
+     
+        .botm-flex {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .book {
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+           
+        }
+
+        ul, ol {
+            list-style-position: inside;
+            text-align: center;
+        }
+
+        @media(max-width: 800px){
+            .search, .search-bar {
+                display: none;
+            }
+
+            nav ul{
+                flex-direction: column;
+                align-items: center;
+                gap: 10px; 
+            }
+            .hero-text {
+                font-size: 28px;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        @media(max-width: 625px){
+            .botm-flex, .book, .flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            video{
+                width: 250px;
+                height: auto;
+            }
+            .hero-text {
+                font-size: 28px;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 400px) {
+            body, .homecontainer, .homefieldcontainer, .insideform, legend, header, .tagline, nav, nav ul, nav a, nav a:hover {
+                width: 94%;
+                font-size: 16px;
+                padding: 2%;
+            }         
+
+            .tagline img {
+                display: none;
+            }
+
+            .search-bar {
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+                margin: 10px 0;
+            }
+
+            .search {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            .hero-text {
+                font-size: 28px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .botm-flex, .book, .flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .book img {
+                width: 90%;
+                height: auto;
+            }
+
+            ul, ol {
+                padding-left: 10px;
+            }
+
+            blockquote {
+                padding: 10px;
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .footerlogo {
+                height: 40px;
+            }
+
+            .commercial {
+                width: 250px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="homecontainer">
+        <header>
+            <div class="logo">
+                <img src="booksforsnookslogo.jpg" alt="Logo" height="150px">
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a book..." class="search">
+                <button class="searchbutton"><b>GO</b></button>
+            </div>
+
+            <div class="tagline">
+                <img src="booksforsnookstagline.jpg" alt="Tagline" height="100px">
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Refresh Home</a></li>
+                <li><a href="login.html">Login</a></li> 
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>     
+            </ul>
+        </nav>
+        
+        <div class="hero-image">
+            <div class="hero-text">
+                <br>
+                <p><b>h3llo n00b,<br>w3lc0m3 t0 the matrix</b></p>
+                <br><br>                       
+            </div>
+        </div>
+
+        <main class="homefieldcontainer">
+            <br>
+            <h2>Our Business</h2>
+            <p class="intro">Welcome to b00ks 4 sn00ks, the ultimate online bookstore for coders of all levels. 
+            Whether you&apos;re a beginner taking your first steps in programming or an experienced 
+            developer looking to refine your expertise, we&apos;ve got the perfect book for you.
+            
+            Our carefully curated selection covers everything from Python, Java, and web 
+            development to advanced topics like AI, cybersecurity, and software architecture. 
+            We believe that learning to code should be accessible, engaging, and rewarding—so we 
+            provide books that are beginner-friendly while also offering in-depth resources for seasoned professionals.
+                
+            At b00ks 4 sn00ks, we don&apos;t just sell books—we support your coding journey. Explore our 
+            collection and take your skills to the next level!</p>
+            <br>
+
+            <h2>Books Of The Month</h2>
+            <h4>Chosen by our team</h4>
+
+            <div class="botm-flex">
+                <div class="book">
+                    <a href="products.html" target="_blank">
+                    <img src="book3.jpg" alt="HTML, CSS, & Javascript book" width="300px" height="300px" class="botm">
+                    </a>
+                    
+                    <ul>
+                        <li> Incorporate the latest approaches to HTML, CSS, and JavaScript, including those involving new markup, page styles, interactivity, and more</li>
+                        <li> Step-by-step instructions for new site creators explaining the very basics of page layouts and animations</li>
+                        <li>Easy-to-follow advice for adjusting page color and background, adding widgets to a site, and getting rid of all the bugs that affect site performance</li>
+                    </ul>
+                </div>
+
+                <div class="book">
+                    <a href="products.html" target="_blank">
+                    <img src="book2.jpg" alt="C#10.0 All-In-One Dummies" width="300px" height="300px" class="botm">
+                    </a>
+
+                    <ul>
+                        <li>Learn the very basics of C# programming, even if you have no prior experience</li>
+                        <li>Refresh your knowledge of the language and learn how to use the new features in the 10.0 version release</li>
+                        <li>Read six mini-books on hot coding topics like object-oriented programming, Visual Studio, and Windows 10 development</li>
+                    </ul>
+                </div>
+
+                <div class="book">
+                    <a href="products.html" target="_blank">
+                    <img src="book4.jpg" alt="HTML & CSS "width="300px" height="300px" class="botm">
+                    </a>
+                    
+                    <ul>
+                        <li>Introduces HTML and CSS in a way that makes them accessible to everyone―from students to freelancers, and developers, programmers, marketers, social media managers, and more</li>
+                        <li>Provides an efficient and user-friendly structure that allows readers to progress through the chapters in a self-paced format</li>
+                        <li>Is perfect for anyone looking to update a content management system, run an e-commerce store, or redesign a website using popular web development tools</li>
+                    </ul>
+                </div>       
+            </div>
+
+            <figure>
+                <h2>Advertisement</h2>
+                <video src="bookstorecommercial.mp4" type="video/mp4" width="533" height="300" autoplay controls loop class="commercial">video not supported</video>
+                <figcaption>Featured on Amazon Prime</figcaption>
+            </figure>
+
+            <div class="flex">
+                <div class="choose-us">
+                <h1 class="choose-title">Why Choose Us?</h1>
+                  <ol>
+                        <b><li>Focus on practical knowledge</b>
+                            <ul><br>
+                                <li>Skip the fluff! Our books are packed with real coding challenges <br>and hands-on projects that actually level up your skills.</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <b><li>Affordable and Accessible</b>
+                           
+                            <ul><br> 
+                                <li>Budget-friendly prices with instant digital downloads and worldwide shipping.</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <b><li>Tailored For Coders At Every Level</b>
+                        <br>
+                            <ul><br>
+                                <li>From beginners learning Python to advanced developers diving into AI and algorithms.</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <b><li>Expert Reccomendations</b>
+                        <br>
+                            <ul><br>
+                                <li>Curated by seasoned programmers and educators to keep you on the right path.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div>
+            <h2>What Coders Are Saying</h2>
+
+            <blockquote>
+                "If you're a programmer or tech enthusiast, this bookstore is a goldmine! The selection is packed with must-read books on coding, 
+                software development, and cutting-edge technologies. The website is well-organized, making it easy to find books on everything from 
+                Python to AI. Fast delivery, great prices, and helpful recommendations—this is now my go-to source for programming books. Highly 
+                recommended for beginners and pros alike!"
+            </blockquote>
+            </div>
+        </main>
+        <footer>
+            <p><img src="booksforsnooksfooter.jpg" alt="company logo" class="footerlogo" align="middle"> <b>&copy; 2025</b></p>
+        </footer>
+    </div>
+</body>
+</html>
+

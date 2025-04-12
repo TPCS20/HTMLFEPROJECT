@@ -1,0 +1,203 @@
+<!--Christine Bonneville created this Easter Eggpage-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="booksforsnooksfavicon.jpg">
+    <style>
+        /*CSS we share across the website
+
+        body{
+            width: 1250px;
+            margin: 20px auto;
+            padding: 10px;
+            background: url('backgroundcode.jpg');
+            font-size: 20px;
+            font-family: Courier;
+        }
+
+        header {
+            display:flex;
+            justify-content: space-between;
+            background-color: #7a007a;
+            height: 150px;
+            padding: 10px; 
+            margin: 10px; 
+            border-radius: 5px;
+        }
+
+        .tagline {
+            margin-right: 10px;
+            margin-top: 30px;
+        }
+
+        nav {
+            font-family: Courier;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background-color:#afafff;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-evenly;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 25px;
+            font-family: Courier; 
+            color: #0000b8;
+            font-weight: bold;
+            
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #afafff;
+            text-align: center;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        .footerlogo {
+            height:50px;
+            padding: 10px;
+        }*/
+              
+         /*CSS for just the contact page*/
+        
+        .contactcontainer {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fef9ff;
+            padding: 10px;
+            border: 2px solid #7a007a;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+    
+ /*CSS specific to contact page*/
+
+        .fieldsetcontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            border: 5px solid #7a007a;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .insideform {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            justify-content: space-evenly;
+            border: 3px solid #0000b8;
+            border-radius: 5px;
+            font-weight: bold;
+            color: midnightblue;
+            width: 100%;
+            clear: both;
+        }
+
+        legend {
+            background-color: #fff5ee;
+            color: #0000b8;
+            border: 3px solid #000000;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: left;
+        }
+
+        /*media queries for contact page*/
+
+        @media screen and (max-width: 400px) {
+            body, .contactcontainer, .fieldsetcontainer, .insideform, legend, header, .tagline, nav, nav ul, nav a, nav a:hover {
+                width: 94%;
+                padding: 2%;
+                font-size: 16px;
+            }
+
+            .tagline {
+                display: none;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .fieldsetcontainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .insideform {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                justify-content: space-evenly;
+            }
+
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="contactcontainer">
+    <header>
+        <div class="logo">
+            <img src="booksforsnookslogo.jpg" alt="Logo" height="150px"></img>
+        </div>
+
+        <div class="tagline">
+            <img src="booksforsnookstagline.jpg" alt="Tagline" height="100px"></img>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+                      
+        </ul>
+    </nav>
+
+    <br>
+    <main>
+        <div class="fieldsetcontainer">
+            <form>      
+                <fieldset class="insideform">
+                    <legend>A little peek behind the website...</legend>
+                    <video src="HTML FE GROUP 1 SLIDE DECK VIDEO FINAL.mp4" width="640" height="480" autoplay controls loop>Video may not be supported</video>
+                
+                    
+                </fieldset>
+            </form> 
+        </div>
+    </main>
+   
+    <footer>
+        <p><img src="booksforsnooksfooter.jpg" alt="company logo" class="footerlogo" align="middle"> <b>&copy; 2025</b></p>
+    </footer>
+</div>
+</body>
+</html>
